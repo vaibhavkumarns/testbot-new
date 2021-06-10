@@ -6,7 +6,7 @@ class MyBot(ActivityHandler):
 
     async def on_message_activity(self, turn_context: TurnContext):
         print(turn_context.activity.text)
-        await turn_context.send_activity(f"You said '{ turn_context.activity.text }'")
+        await turn_context.send_activity(f"You said '{ turn_context.activity.text }' (from azure env)")
 
     async def on_members_added_activity(
         self,
